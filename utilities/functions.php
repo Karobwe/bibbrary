@@ -26,10 +26,22 @@ function bootstrap_alert(string $message, string $type = 'info') {
   echo '<div class="alert alert-' . $type . '">' . $message . '</div>';
 }
 
-
+/**
+ * Recherche une classe dans le dossier "controller" ou "model"
+ * et l'enregistre dans la fonction "spl_autoload_register()"
+ */
 function autoloader() {
   spl_autoload_register(function($class){
-    $sources = array("controller/$class.php", "model/$class.php ");
+    $sources = array(
+      "controller/$class.php", 
+      "model/$class.php", 
+      "model/author/$class.php", 
+      "model/book/$class.php", 
+      "model/customer/$class.php", 
+      "model/librarian/$class.php",
+      "model/loan/$class.php",
+      "model/publisher/$class.php"
+    );
   
     foreach ($sources as $source) {
       if (file_exists($source)) {

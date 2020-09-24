@@ -1,6 +1,7 @@
 <?php
 
-include_once("model/Book.php");
+require_once 'utilities/functions.php';
+autoloader();
 
 class Model {
 	public function getBookList()
