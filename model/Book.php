@@ -1,5 +1,8 @@
 <?php
 
+require_once 'utilities/functions.php';
+autoloader();
+
 class Book {
 
 	/**
