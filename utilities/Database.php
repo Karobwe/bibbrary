@@ -1,6 +1,7 @@
 <?php
 
-require_once 'config.php';
+// require_once 'config.php';
+require_once realpath(dirname(__FILE__) . '/..') . '/config.php';
 
 /**
  * Ouvre une connection vers la base de données en utilisant les informations 

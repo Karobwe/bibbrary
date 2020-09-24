@@ -11,4 +11,4 @@
   </head>
   <body>
   <?php include 'menu.php' ?>
-    <div class="container pt-5">
+    <div class="container-fluid">

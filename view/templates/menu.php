@@ -10,19 +10,19 @@
                 <a class="nav-link active" href="http://localhost/bibbrary/">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Authors</a>
+                <a class="nav-link" data-href="authors" href="author.php">Authors</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Customers</a>
+                <a class="nav-link disabled" data-href="" href="">Customers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Librarians</a>
+                <a class="nav-link disabled" data-href="" href="">Librarians</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Publisher</a>
+                <a class="nav-link disabled" data-href="" href="">Publisher</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Loans</a>
+                <a class="nav-link disabled" data-href="" href="">Loans</a>
             </li>
         </ul>
     </div>

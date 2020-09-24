@@ -40,7 +40,8 @@ function autoloader() {
       "model/customer/$class.php", 
       "model/librarian/$class.php",
       "model/loan/$class.php",
-      "model/publisher/$class.php"
+      "model/publisher/$class.php",
+      "utilities/$class.php", 
     );
   
     foreach ($sources as $source) {
