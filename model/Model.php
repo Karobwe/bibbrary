@@ -7,9 +7,9 @@ class Model {
 	{
 		// here goes some hardcoded values to simulate the database
 		return array(
-			"0" => new Book("Eligendi dolorum id dolorem", "Rocio Mante", "9782893775760", "Officiis sed qui culpa. Ipsum dolorem ipsam voluptas laudantium nostrum eligendi corrupti neque. Necessitatibus autem rerum."),
-			"1" => new Book("Moonwalker", "J. Walker", "9782893795727", "Excepturi neque qui vero et. Aut rerum perspiciatis dolor qui quaerat mollitia cumque eveniet."),
-			"2" => new Book("PHP for Dummies", "Some Smart Guy", "9762393775782", "Est dolor qui voluptas minus fugit.")
+			"1" => new Book("Être et Temps", "9782070707393", 1, 1, 1),
+			"2" => new Book("Finnegans Wake", "9782070402250", 2, 2, 2),
+			"3" => new Book("Critique de la raison pure", "9782070325757", 3, 3, 3)
 		);
 	}
 	
@@ -20,5 +20,4 @@ class Model {
 		$allBooks = $this->getBookList();
 		return $allBooks[$title];
 	}
-	
 }

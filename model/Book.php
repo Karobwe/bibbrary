@@ -5,107 +5,80 @@ autoloader();
 
 class Book {
 
-	/**
-	 * @var int
-	 */
-	private $id;
+    /**
+     * @var int
+     */
+    private $id;
+    
+    /**
+     * @var string
+     */
+    public $title;
 
-	/**
-	 * @var string
-	 */
-	private $title;
+    /**
+     * @var string
+     */
+    public $isbn;
 
-	/**
-	 * @var string
-	 */
-	private $isbn;
+    /**
+     * @var int
+     */
+    public $edition;
+    
+    public function __construct(string $title, string $isbn, $edition, int $authorId, int $publisherId) {
+        $this->setId(0);
+        $this->setTitle($title);
+        $this->setIsbn($isbn);
+        $this->setEdition($edition);
+        $this->setAuthorId($authorId);
+        $this->setPublisherId($publisherId);
+    }
 
-	/**
-	 * @var string
-	 */
-	private $author;
+    public function getId(): int {
+        return $this->id;
+    }
 
-	/**
-	 * @var string
-	 */
-	private $description;
+    public function setId(int $id): void {
+        $this->id = $id;
+    }
 
-	/**
-	 * @var string
-	 */
-	private $coverImageUrl;
-	
-	public function __construct(string $title, string $author, string $isbn, string $description, int $id = 0, string $coverImageUrl = '') {
-    $this->setTitle($title);
-		$this->setAuthor($author);
-		$this->setIsbn($isbn);
-		$this->setDescription($description);
-		$this->setId($id);
-		$this->setCoverImageUrl($coverImageUrl);
-	}
+    public function getTitle(): string {
+        return $this->title;
+    }
 
-	public function getId(): int {
-		return $this->id;
-	}
+    public function setTitle(string $title): void {
+        $this->title = $title;
+    }
 
-	public function setId(int $id): void {
-		if($id > 0) {
-			$this->id = $id;
-		}
+    public function getIsbn(): string {
+        return $this->isbn;
+    }
 
-		if(is_null($id) || $id === 0) {
-			$this->id = 0;
-		}
-	}
+    public function setIsbn(string $isbn): void {
+        $this->isbn = $isbn;
+    }
 
-	public function getTitle(): string {
-		return $this->title;
-	}
+    public function getEdition(): int {
+        return $this->edition;
+    }
 
-	public function setTitle(string $title): void {
-		if(!empty($title)) {
-			$this->title = $title;
-		}
-	}
+    public function setEdition(int $edition): void {
+        $this->edition = $edition;
+    }
 
-	public function getAuthor(): string {
-		return $this->author;
-	}
+    public function getAuthorId(): string {
+        return $this->authorId;
+    }
 
-	public function setAuthor(string $author): void {
-		$this->author = $author;
-	}
+    public function setAuthorId(int $authorId): void {
+        $this->authorId = $authorId;
+    }
 
-	public function getIsbn(): string {
-		return $this->isbn;
-	}
+    public function getPublisherId(): string {
+        return $this->publisherId;
+    }
 
-	public function setIsbn(string $isbn): void {
-		$this->isbn = $isbn;
-	}
-
-	public function getDescription(): string {
-		return $this->description;
-	}
-
-	public function setDescription(string $description): void {
-		$this->description = $description;
-	}
-
-	public function getCoverImageUrl(): string {
-		return $this->coverImageUrl;
-	}
-
-	public function setCoverImageUrl(string $coverImageUrl): void {
-		if(!empty($coverImageUrl)) {
-			$img = getimagesize($coverImageUrl);
-			$image_type = $img[2];
-			if($img) {
-				if(in_array($image_type , array(IMAGETYPE_GIF , IMAGETYPE_JPEG ,IMAGETYPE_PNG))) {
-					$this->coverImageUrl = $coverImageUrl;
-				}
-			}
-		}
-	}
-
+    public function setPublisherId(int $publisherId): void {
+        $this->publisherId = $publisherId;
+    }
 }

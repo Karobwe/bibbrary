@@ -10,4 +10,5 @@
     <title>Carjax</title>
   </head>
   <body>
+  <?php include 'menu.php' ?>
     <div class="container pt-5">

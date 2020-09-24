@@ -3,6 +3,16 @@
 class Loan {
 
   /**
+   * @var DateTime
+   */
+  private $loanDate;
+
+  /**
+   * @var int
+   */
+  private $isActive;
+
+  /**
    * @var int
    */
   private $customerId;
@@ -17,62 +27,52 @@ class Loan {
    */
   private $librarianId;
 
-  /**
-   * @var DateTime
-   */
-  private $loanDate;
-
-  /**
-   * @var bool
-   */
-  private $isActive;
-
-  public function __construct(DateTime $loanDate = new DateTime('NOW'), bool $isActive = true, int $customeriD, int $bookId, int $librarianId) {
-    $this->setloanDate($loanDate);
-    $this->setIsActive($isActive);
-    $this->setCustomerId($customeriD);
-    $this->setBookId($bookId);
-    $this->setLibrarianId($librarianId);
+  public function __construct(string $loanDate, bool $isActive, int $customerId, int $bookId, int $librarianid) {
+      $this->setLoanDate($loanDate);
+      $this->setIsActive($isActive);
+      $this->setCustomerId($customerId);
+      $this->setBookId($bookId);
+      $this->setLibrartianId($librarianid);
   }
 
-  public function getLoanDate(): string {
-    return $this->loanDate->format('Y-m-d H:i');
+  public function getLoanDate(): DateTime {
+      return $this->loanDate;
   }
 
-  public function setloanDate(DateTime $loanDate = new DateTime('NOW')): void {
-    $this->loanDate = $loanDate;
+  public function setLoanDate(string $loanDate): void {
+      $this->loanDate = new DateTime($loanDate);
   }
 
   public function isActive(): bool {
-    return $this->isActive;
+      return $this->loanIsActive;
   }
 
-  public function setIsActive(bool $isActive): void {
-    $this->isActive = $isActive;
+  public function setIsActive(int $isActive): void {
+      $this->isActive = $isActive;
   }
 
   public function getCustomerId(): int {
-    return $this->customerId;
+      return $this->customerId;
   }
 
   public function setCustomerId(int $customerId): void {
-    $this->customerId = $customerId;
+      $this->customerId = $customerId;
   }
 
   public function getBookId(): int {
-    return $this->BookId;
+      return $this->bookId;
   }
 
-  public function setBookId(int $BookId): void {
-    $this->BookId = $BookId;
+  public function setBookId(int $bookId): void {
+      $this->id = $bookId;
   }
 
   public function getLibrarianId(): int {
-    return $this->librarianId;
+      return $this->librarianId;
   }
 
-  public function setLibrarianId(int $librarianId): void {
-    $this->librarianId = $librarianId;
+  public function setLibrartianId(int $librarianId): void {
+      $this->librarianId = $librarianId;
   }
 
 }
